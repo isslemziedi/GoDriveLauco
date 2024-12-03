@@ -30,9 +30,49 @@
             android:name=".CarDescriptionActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ReservationActivity"
+            android:exported="false" />
 
         <activity
             android:name=".MainActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".AcceuillActivity2"
+            android:exported="false"/>
+
+
+        <activity
+            android:name=".CreditCardActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".Reservation2Activity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".Reservation3Activity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".ReservationSuccessActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".AcceuillActivity1"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

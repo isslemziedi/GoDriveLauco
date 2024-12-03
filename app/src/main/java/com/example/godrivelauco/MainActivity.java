@@ -1,7 +1,9 @@
 package com.example.godrivelauco;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -37,8 +39,12 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference databaseReferenceBrand;
 
 
+    private View GoToHome;
+    private  View GoToProfile;
+    private View GoToReservation;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +66,35 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewBrand= findViewById(R.id.brandRecyclerView);
         recyclerView1= findViewById(R.id.recycleNearCar);
         recyclerView2 = findViewById(R.id.recyclePopularCar);
+
+        GoToHome = findViewById(R.id.nav_home);
+        GoToProfile =  findViewById(R.id.nav_profile);
+        GoToReservation = findViewById(R.id.nav_reservation);
+
+
+        GoToHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        GoToProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        GoToReservation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ReservationActivity.class);
+                startActivity(intent);
+            }
+        });
 
         recyclerViewBrand.setNestedScrollingEnabled(false);
         recyclerView1.setNestedScrollingEnabled(false);

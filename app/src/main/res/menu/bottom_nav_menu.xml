@@ -11,7 +11,7 @@
         android:title="Bookmark"/>
 
     <item
-        android:id="@+id/nav_notifications"
+        android:id="@+id/nav_reservation"
         android:icon="@drawable/ic_notifications"
         android:title="Notifications"/>
 
