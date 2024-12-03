@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                android:src="@drawable/ic_back_arrow" />
+
+            <TextView
+                android:layout_width="324dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Filter"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Price"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.slider.RangeSlider
+            android:id="@+id/priceRangeSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="slider"
+            android:valueFrom="0"
+            android:valueTo="500" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FROM"/>
+
+                    <TextView
+                        android:id="@+id/fromPriceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100DT /day"
+                        android:textColor="#CD853F"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TO"/>
+
+                    <TextView
+                        android:id="@+id/toPriceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="150DT /day"
+                        android:textColor="#CD853F"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="types of fuel"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/fuelTypeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/gasoline"
+                android:layout_width="286dp"
+                android:layout_height="wrap_content"
+                android:text="Gasoline" />
+
+            <RadioButton
+                android:id="@+id/diesel"
+                android:layout_width="281dp"
+                android:layout_height="wrap_content"
+                android:text="Diesel" />
+
+            <RadioButton
+                android:id="@+id/biodiesel"
+                android:layout_width="288dp"
+                android:layout_height="wrap_content"
+                android:text="Biodiesel" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Category"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/categoryGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/economy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Economy"/>
+
+            <RadioButton
+                android:id="@+id/suv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUV"/>
+
+            <RadioButton
+                android:id="@+id/luxury"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Luxury"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Places number"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+
+            <CheckBox
+                android:id="@+id/seats3"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:text="3" />
+
+            <CheckBox
+                android:id="@+id/seats7"
+                android:layout_width="133dp"
+                android:layout_height="wrap_content"
+                android:text="7" />
+
+            <CheckBox
+                android:id="@+id/seats5"
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:text="5" />
+
+            <CheckBox
+                android:id="@+id/seats9"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="9" />
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Transmission"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/transmissionGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/automatic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Automatic"/>
+
+            <RadioButton
+                android:id="@+id/manual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manual"/>
+
+            <RadioButton
+                android:id="@+id/airConditioning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Air-conditioning"/>
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/showResultButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/primary"
+            android:padding="12dp"
+            android:text="Show Result"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</ScrollView>

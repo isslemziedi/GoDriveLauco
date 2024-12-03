@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/credit_card">
+
+
+    <ImageView
+        android:id="@+id/imageViewGoBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/titleTextView"
+        android:layout_alignBottom="@+id/titleTextView"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toStartOf="@+id/titleTextView"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Credit Card Details"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_payment_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleTextView"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/dashed_border"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:textAlignment="center"
+            android:layout_marginRight="15dp">
+
+            <TextView
+                android:id="@+id/payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:id="@+id/method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Method"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/iv_mastercard"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_mastercard" />
+
+        <ImageView
+            android:id="@+id/iv_visa"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/ic_visa" />
+
+        <ImageView
+            android:id="@+id/iv_american_express"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/ic_american_express" />
+
+        <ImageView
+            android:id="@+id/iv_discover"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/ic_discover" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cardNumTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Card number"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/ll_payment_options"
+        android:layout_marginStart="65dp"
+        />
+
+    <EditText
+        android:id="@+id/CardNumEditText"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/cardNumTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edittext"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:hint="0000 0000 0000 0000"/>
+
+    <TextView
+        android:id="@+id/cardExpTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Card expiration"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/CardNumEditText"
+        android:layout_marginStart="65dp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/cardExpTextView"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="65dp"
+        android:id="@+id/dateExp"
+        >
+
+        <Spinner
+            android:id="@+id/spinner_month"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:prompt="@string/month_prompt"
+            android:background="@drawable/rounded_edittext"
+            android:padding="15dp"
+            android:popupBackground="@color/white"
+            android:drawableEnd="@drawable/drop_down"
+            android:drawablePadding="10dp"
+            android:textAlignment="center"/>
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spinner_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:prompt="@string/year_prompt"
+            android:background="@drawable/rounded_edittext"
+            android:padding="15dp"
+            android:popupBackground="@color/white"
+            android:drawableEnd="@drawable/drop_down"
+            android:drawablePadding="10dp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/SecurityCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Card expiration"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/dateExp"
+        android:layout_marginStart="65dp" />
+
+
+    <EditText
+        android:id="@+id/CardCodeEditText"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/SecurityCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edittext"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:hint="Code"
+        android:drawableEnd="@drawable/code"
+        android:drawablePadding="10dp"/>
+
+    <Button
+        android:id="@+id/confirmBooking4Button"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/CardCodeEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:backgroundTint="@color/darkBeige"
+        />
+
+
+
+</RelativeLayout>

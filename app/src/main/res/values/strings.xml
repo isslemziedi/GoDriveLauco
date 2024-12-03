@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GoDriveLauco</string>
+
+    <string name="month_prompt">Month</string>
+    <string name="year_prompt">Year</string>
+    <string name="image_content_desc">Image description goes here</string>
+
+    <string name="favorite_button_description">Ajouter aux favoris</string>
+    <string name="client_id">17517581034-tllb55neae0lblccgqlg8dq2fges137b.apps.googleusercontent.com</string>
+
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "501977687410",
+    "project_id": "godrive-610cb",
+    "storage_bucket": "godrive-610cb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501977687410:android:a6cd0bcf9a64ba82fb29eb",
+        "android_client_info": {
+          "package_name": "com.example.godrivelauco"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3J5ZkZh8O2yQms-3kJyQGa4GedmV4uKc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
