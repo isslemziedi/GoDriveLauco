@@ -26,6 +26,10 @@
             android:name=".filterActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".CarDescriptionActivity"
+            android:exported="false" />
+
 
         <activity
             android:name=".MainActivity"
